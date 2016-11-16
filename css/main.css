@@ -73,21 +73,6 @@
     .quick-info li a {
         color: #9D9D9D;
     }
-    
-    .events-calendar {
-        position: relative;
-        padding-bottom: 100vh;
-        height: 0;
-        overflow: hidden;
-    }
-    
-    .events-calendar iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 95vw;
-        height: 95vh;
-    }
     /* Sticky footer styles
 -------------------------------------------------- */
     
@@ -231,4 +216,13 @@
         color: #c8c8c8;
         padding: 0;
         margin: 0;
+    }
+    
+    @media screen and (max-width: 991px) {
+        .brand-right {
+            display: none;
+        }
+        .upcoming-events {
+            width: 80vw;
+        }
     }
