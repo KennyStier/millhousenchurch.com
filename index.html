@@ -9,11 +9,11 @@
     <title>Immaculate Conception Church | Millhousen, IN</title>
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" href="img/church-logo.png">
+    <link rel="icon" href="/img/church-favicon.png">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,7 +24,7 @@
 
 <body>
     <div class="row branding-header">
-        <div class="col-md-3"><img class="brand" src="/img/church-logo.png" alt="Logo"></div>
+        <div class="col-md-3"><img class="brand" src="/img/church-logo.svg" alt="Immaculate Conception Logo"></div>
         <div class="col-md-6">
             <div class="brand-txt">
                 <h1>Immaculate Conception Church</h1>
@@ -81,7 +81,18 @@
             <!-- /.container-fluid -->
         </nav>
         <div class="container">
-            <ul id="events-upcoming"> </ul>
+            <div class="upcoming-events col-md-2">
+                <!--   </ul> -->
+                <div class="span3 fullWidth767">
+                    <ul id="events-upcoming" class="list1"></ul>
+                </div>
+            </div>
+            <div class="page-content co-md-6">
+                <h3>Mission Statement</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum tellus mauris, nec placerat quam volutpat in. Curabitur sollicitudin ligula mauris, at consequat ligula rutrum id. Duis non diam ac mauris iaculis consequat eu eget velit. Ut viverra sed risus eget blandit. Cras porta libero nec est pellentesque, nec aliquam sapien aliquam. Nullam id magna nunc. Vestibulum metus urna, venenatis vitae scelerisque sed, euismod ut nulla. Fusce gravida elit in neque elementum, nec finibus turpis accumsan. Duis commodo purus eget condimentum gravida. Sed id eros non elit volutpat pellentesque ac id dolor. Quisque vel metus quis sem sodales congue gravida ultrices lacus. Aliquam in blandit erat. Integer vitae turpis in nisl eleifend mattis pretium eget arcu. Integer ut finibus nibh. Vivamus eget arcu tellus. Cras mollis ultricies dui, eget vestibulum lacus vehicula sit amet. </p>
+                <h3>Lorem 2</h3>
+                <p>Aenean luctus tempor sodales. Sed tempus, magna at elementum suscipit, leo lorem tempor sem, tempor eleifend dui mi sit amet massa. Nunc nec libero condimentum, lobortis nisl in, pretium dui. Vestibulum at aliquet velit, sed fringilla metus. Proin molestie et mauris quis sodales. Donec dui risus, euismod volutpat mauris at, elementum varius nibh. Curabitur rhoncus augue aliquet neque semper, et iaculis turpis tincidunt. Maecenas consectetur accumsan nisl a gravida. Quisque pellentesque in justo eu rhoncus. Ut sodales erat sit amet turpis scelerisque, nec tincidunt nibh sollicitudin. Aenean scelerisque porta libero, quis sagittis augue facilisis sit amet. Proin a purus nec metus aliquam suscipit. Nunc ut quam ac risus pulvinar commodo. Nulla facilisi. Cras non posuere magna, vel commodo orci. Maecenas non dapibus nisi, et maximus urna. </p>
+            </div>
         </div>
     </div>
     <footer class="footer">
@@ -99,20 +110,20 @@
             , past: false
             , upcoming: true
             , sameDayTimes: true
-            , dayNames: true
+            , dayNames: false
             , pastTopN: -1
             , upcomingTopN: 5
             , itemsTagName: 'li'
             , upcomingSelector: '#events-upcoming'
             , pastSelector: '#events-past'
-            , upcomingHeading: '<h2>Upcoming events</h2>'
+            , upcomingHeading: '<h3>Upcoming events</h3>'
             , pastHeading: '<h2>Past events</h2>'
-            , format: ['*date*', ': ', '*summary*', ' — ', '*description*', ' at ', '*location*']
+            , format: ['<h4>', '*summary*', '</h4>', '*date*', '<br/>', '*location*']
         });
     </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
