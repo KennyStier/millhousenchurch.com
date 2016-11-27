@@ -2,17 +2,25 @@
         color: snow;
         font-family: 'Raleway', serif;
         background-image: url(http://millhousenchurch.com/img/content_bg.jpg);
+        width: 100vw;
         overflow-x: hidden;
     }
     
     nav {
         background-image: url(http://millhousenchurch.com/img/content_bg.jpg);
         border: 0px 0px 0px 0px;
+        width: 100vw;
+    }
+    
+    .etched-pattern {
+        width: 100vw;
     }
     
     .branding-header {
         background-color: #080808;
         color: #9D9D9D;
+        width: 100vw;
+        margin: 0px;
     }
     
     .brand {
@@ -39,7 +47,13 @@
         font-size: 1.6em;
     }
     
-    .brand-right {}
+    .brand-right {
+        padding-right: 0;
+    }
+    
+    .brand-left {
+        padding-left: 0;
+    }
     
     .etched-pattern {
         background-image: url(http://millhousenchurch.com/img/content_bg.jpg);
@@ -89,7 +103,7 @@
     .footer {
         position: absolute;
         bottom: 0;
-        width: 100%;
+        width: 100vw;
         /* Set the fixed height of the footer here */
         height: 40px;
         background-color: #080808;
@@ -224,5 +238,66 @@
         }
         .upcoming-events {
             width: 100%;
+        }
+        .brand-txt {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    /*Business Card Css */
+    
+    .business-card {
+        border: 1px solid #cccccc;
+        background: #f8f8f8;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        color: black;
+    }
+    
+    .profile-img {
+        height: 120px;
+        background: white;
+    }
+    
+    .job {
+        color: #666666;
+        font-size: 17px;
+    }
+    
+    .mail {
+        color: #666666;
+        font-size: 16px;
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .profile-img {
+            height: 100px;
+        }
+        .job {
+            font-size: 15px;
+        }
+        .mail {
+            font-size: 14px;
+        }
+        .media-heading {
+            font-size: 25px;
+        }
+    }
+    
+    @media screen and (max-width: 445px) {
+        .media-body,
+        .media-left {
+            display: block;
+            width: 100%;
+        }
+        .profile-img {
+            margin: 0 auto;
+        }
+        .profile-img,
+        .job,
+        .mail,
+        .media-heading {
+            text-align: center;
         }
     }

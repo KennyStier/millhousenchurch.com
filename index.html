@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.3/outdatedbrowser.min.css" />
     <link rel="icon" href="/img/church-favicon.png">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,8 +23,9 @@
 </head>
 
 <body>
+    <div id="outdated"></div>
     <div class="row branding-header">
-        <div class="col-md-3"><img class="brand" src="/img/church-logo.svg" alt="Immaculate Conception Logo"></div>
+        <div class="col-md-3 brand-left"><img class="brand" src="/img/church-logo.svg" alt="Immaculate Conception Logo"></div>
         <div class="col-md-6">
             <div class="brand-txt">
                 <h1>Immaculate Conception Church</h1>
@@ -35,7 +36,7 @@
                 <ul>
                     <li>PLC: Sister Donna Prickel</li>
                     <li>Mass: Sunday at 8 AM</li>
-                    <li><a href="tel:8125913703">(812) 591-2362</a></li>
+                    <li><a href="tel:8125912362">(812) 591-2362</a></li>
                 </ul>
             </div>
         </div>
@@ -53,7 +54,7 @@
                         <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
                         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Staff</a></li>
+                                <li><a href="/staff/">Staff</a></li>
                                 <li><a href="#">Lay Leadership</a></li>
                                 <li><a href="#">Parish History</a></li>
                                 <li role="separator" class="divider"></li>
@@ -89,6 +90,7 @@
             <div class="page-content co-md-6">
                 <h3>Mission Statement</h3>
                 <p>Immaculate Conception Parish is a center of worship and faith formation based in the Roman Catholic tradition serving the needs of 220 families in rural Millhousen, Indiana and the surrounding Decatur and Jennings Counties. Activities include weekly worship, sacramental preparation, youth ministry, ministry to the homebound, outreach services, RCIA, and much more.</p>
+                <!-- Just some generic text to fill space until I have some better ideas for the home page -->
                 <h3>Lorem 2</h3>
                 <p>Aenean luctus tempor sodales. Sed tempus, magna at elementum suscipit, leo lorem tempor sem, tempor eleifend dui mi sit amet massa. Nunc nec libero condimentum, lobortis nisl in, pretium dui. Vestibulum at aliquet velit, sed fringilla metus. Proin molestie et mauris quis sodales. Donec dui risus, euismod volutpat mauris at, elementum varius nibh. Curabitur rhoncus augue aliquet neque semper, et iaculis turpis tincidunt. Maecenas consectetur accumsan nisl a gravida. Quisque pellentesque in justo eu rhoncus. Ut sodales erat sit amet turpis scelerisque, nec tincidunt nibh sollicitudin. Aenean scelerisque porta libero, quis sagittis augue facilisis sit amet. Proin a purus nec metus aliquam suscipit. Nunc ut quam ac risus pulvinar commodo. Nulla facilisi. Cras non posuere magna, vel commodo orci. Maecenas non dapibus nisi, et maximus urna. </p>
             </div>
@@ -98,7 +100,7 @@
         <div class="jagged-pattern"></div>
         <div class="container">
             <p class="text-muted pull-left">Designed by <a href="https://webdesign.flexstart.me">Kenny Stier</a> - Hosted by <a href="http://www.stsmarthosting.com/">Street Smart</a></p>
-            <p class="text-muted pull-right">Contribute to the site on <a href="https://github.com/19kestier/millhousenchurch.com/">Github</a></p>
+            <p class="text-muted pull-right">Contribute to the site on <a href="https://github.com/19kestier/millhousenchurch.com/">GitHub</a></p>
         </div>
     </footer>
     <script src="/js/format-google-calendar.js"></script>
@@ -106,7 +108,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         formatGoogleCalendar.init({
-            calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/millhousenchurch.com_9og4v0j9kgl200r65quv01d65c@group.calendar.google.com/events?key=AIzaSyAzEfSIZVELF5T1ZDrd-xwWNwRc69s-Zm8'
+            calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/millhousenchurch.com_9og4v0j9kgl200r65quv01d65c@group.calendar.google.com/events?key=AIzaSyAzEfSIZVELF5T1ZDrd-xwWNwRc69s-Zm8&singleEvents=true&orderBy=startTime'
             , past: false
             , upcoming: true
             , sameDayTimes: true
@@ -124,6 +126,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.3/outdatedbrowser.min.js"></script>
+    <script src="/js/outdated-browser.js"></script>
 </body>
 
 </html>
