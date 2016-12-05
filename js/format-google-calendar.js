@@ -1,184 +1,335 @@
-var formatGoogleCalendar=function() {
-    "use strict";
-    var a,
-    b=function(b) {
-        var d=[];
-        a=b,
-        jQuery.getJSON(b.calendarUrl, function(a) {
-            a.items.forEach(function(a) {
-                a&&a.hasOwnProperty("status")&&"cancelled"!==a.status&&d.push(a)
+/**
+ * Format Google Calendar JSON output into human readable list
+ *
+ * Copyright 2015, Milan Kacurak
+ *
+ */
+var formatGoogleCalendar = (function () {
+    'use strict';
+    var config;
+    //Gets JSON from Google Calendar and transfroms it into html list items and appends it to past or upcoming events list
+    var init = function (settings) {
+        var result = [];
+        config = settings;
+        //Get JSON, parse it, transform into list items and append it to past or upcoming events list
+        jQuery.getJSON(settings.calendarUrl, function (data) {
+            // Remove any cancelled events
+            data.items.forEach(function removeCancelledEvents(item) {
+                if (item && item.hasOwnProperty('status') && item.status !== 'cancelled') {
+                    result.push(item);
+                }
+            });
+            result.sort(comp).reverse();
+            var pastCounter = 0
+                , upcomingCounter = 0
+                , pastResult = []
+                , upcomingResult = []
+                , upcomingResultTemp = []
+                , $upcomingElem = jQuery(settings.upcomingSelector)
+                , $pastElem = jQuery(settings.pastSelector)
+                , i;
+            if (settings.pastTopN === -1) {
+                settings.pastTopN = result.length;
             }
-            ), d.sort(c).reverse();
-            var e, h=0, i=0, j=[], k=[], l=[], m=jQuery(b.upcomingSelector), n=jQuery(b.pastSelector);
-            -1===b.pastTopN&&(b.pastTopN=d.length), -1===b.upcomingTopN&&(b.upcomingTopN=d.length), b.past===!1&&(b.pastTopN=0), b.upcoming===!1&&(b.upcomingTopN=0);
-            for(e in d)g(d[e].end.dateTime||d[e].end.date)?h<b.pastTopN&&(j.push(d[e]), h++):l.push(d[e]);
-            l.reverse();
-            for(e in l)i<b.upcomingTopN&&(k.push(l[e]), i++);
-            for(e in j)n.append(f(j[e], b.itemsTagName, b.format));
-            for(e in k)m.append(f(k[e], b.itemsTagName, b.format));
-            0!==m.children().length&&jQuery(b.upcomingHeading).insertBefore(m), 0!==n.children().length&&jQuery(b.pastHeading).insertBefore(n)
+            if (settings.upcomingTopN === -1) {
+                settings.upcomingTopN = result.length;
+            }
+            if (settings.past === false) {
+                settings.pastTopN = 0;
+            }
+            if (settings.upcoming === false) {
+                settings.upcomingTopN = 0;
+            }
+            for (i in result) {
+                if (isPast(result[i].end.dateTime || result[i].end.date)) {
+                    if (pastCounter < settings.pastTopN) {
+                        pastResult.push(result[i]);
+                        pastCounter++;
+                    }
+                }
+                else {
+                    upcomingResultTemp.push(result[i]);
+                }
+            }
+            upcomingResultTemp.reverse();
+            for (i in upcomingResultTemp) {
+                if (upcomingCounter < settings.upcomingTopN) {
+                    upcomingResult.push(upcomingResultTemp[i]);
+                    upcomingCounter++;
+                }
+            }
+            for (i in pastResult) {
+                $pastElem.append(transformationList(pastResult[i], settings.itemsTagName, settings.format));
+            }
+            for (i in upcomingResult) {
+                $upcomingElem.append(transformationList(upcomingResult[i], settings.itemsTagName, settings.format));
+            }
+            if ($upcomingElem.children().length !== 0) {
+                jQuery(settings.upcomingHeading).insertBefore($upcomingElem);
+            }
+            if ($pastElem.children().length !== 0) {
+                jQuery(settings.pastHeading).insertBefore($pastElem);
+            }
+        });
+    };
+    //Compare dates
+    var comp = function (a, b) {
+        return new Date(a.start.dateTime || a.start.date).getTime() - new Date(b.start.dateTime || b.start.date).getTime();
+    };
+    //Overwrites defaultSettings values with overrideSettings and adds overrideSettings if non existent in defaultSettings
+    var mergeOptions = function (defaultSettings, overrideSettings) {
+        var newObject = {}
+            , i;
+        for (i in defaultSettings) {
+            newObject[i] = defaultSettings[i];
         }
-        )
-    }
-    ,
-    c=function(a, b) {
-        return new Date(a.start.dateTime||a.start.date).getTime()-new Date(b.start.dateTime||b.start.date).getTime()
-    }
-    ,
-    d=function(a, b) {
-        var c,
-        d= {}
-        ;
-        for(c in a)d[c]=a[c];
-        for(c in b)d[c]=b[c];
-        return d
-    }
-    ,
-    e=function(a, b) {
-        var c=l(a),
-        d=l(b);
-        return c.getTime()===d.getTime()-864e5&&0===c.getMinutes()&&0===c.getHours()?!0: !1
-    }
-    ,
-    f=function(b, c, d) {
-        var f=h(b.start.dateTime||b.start.date),
-        g=h(b.end.dateTime||b.end.date),
-        i="undefined"!=typeof b.end.date,
-        j=a.dayNames,
-        k=e(f, g);
-        i&&(g=m(g)),
-        k&&(g=n(g));
-        var l,
-        o=s(f, g, i, k, j),
-        p="<"+c+">",
-        q=b.summary||"",
-        r=b.description||"",
-        t=b.location||"";
-        for(l=0;
-        l<d.length;
-        l++)d[l]=d[l].toString(),
-        "*summary*"===d[l]?p=p.concat('<span class="summary">'+q+"</span>"): "*date*"===d[l]?p=p.concat('<span class="date">'+o+"</span>"): "*description*"===d[l]?p=p.concat('<span class="description">'+r+"</span>"): "*location*"===d[l]?p=p.concat('<span class="location">'+t+"</span>"): ("*location*"===d[l+1]&&""!==t||"*summary*"===d[l+1]&&""!==q||"*date*"===d[l+1]&&""!==o||"*description*"===d[l+1]&&""!==r)&&(p=p.concat(d[l]));
-        return p+"</"+c+">"
-    }
-    ,
-    g=function(a) {
-        var b=new Date(a),
-        c=new Date;
-        return c.getTime()>b.getTime()?!0: !1
-    }
-    ,
-    h=function(a) {
-        return a=new Date(a),
-        [a.getDate(),
-        a.getMonth(),
-        a.getFullYear(),
-        a.getHours(),
-        a.getMinutes(),
-        0,
-        0]
-    }
-    ,
-    i=function(a) {
-        var b=["January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"];
-        return b[a]
-    }
-    ,
-    j=function(a) {
-        var b=["Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"];
-        return b[a]
-    }
-    ,
-    k=function(a) {
-        return j(l(a).getDay())+" "
-    }
-    ,
-    l=function(a) {
-        return new Date(a[2], a[1], a[0], a[3], a[4]+0, 0)
-    }
-    ,
-    m=function(a) {
-        var b=l(a);
-        return b.setTime(b.getTime()-864e5),
-        h(b)
-    }
-    ,
-    n=function(a) {
-        var b=l(a);
-        return b.setTime(b.getTime()-6e4),
-        h(b)
-    }
-    ,
-    o=function(b, c, d, e, f) {
-        var g="",
-        h="";
-        return f&&(h=k(b)),
-        !a.sameDayTimes||d||e||(g=" from "+t(b)+" - "+t(c)),
-        h+i(b[1])+" "+b[0]+", "+b[2]+g
-    }
-    ,
-    p=function(a, b, c) {
-        var d="",
-        e="";
-        return c&&(d=k(a), e=k(b)),
-        d+i(a[1])+" "+a[0]+"-"+e+b[0]+", "+a[2]
-    }
-    ,
-    q=function(a, b, c) {
-        var d="",
-        e="";
-        return c&&(d=k(a), e=k(b)),
-        d+i(a[1])+" "+a[0]+"-"+e+i(b[1])+" "+b[0]+", "+a[2]
-    }
-    ,
-    r=function(a, b, c) {
-        var d="",
-        e="";
-        return c&&(d=k(a), e=k(b)),
-        d+i(a[1])+" "+a[0]+", "+a[2]+"-"+e+i(b[1])+" "+b[0]+", "+b[2]
-    }
-    ,
-    s=function(a, b, c, d, e) {
-        var f="";
-        return f=a[0]===b[0]?a[1]===b[1]?a[2]===b[2]?o(a, b, c, d, e): r(a, b, e): a[2]===b[2]?q(a, b, e): r(a, b, e): a[1]===b[1]?a[2]===b[2]?p(a, b, e): r(a, b, e): a[2]===b[2]?q(a, b, e): r(a, b, e)
-    }
-    ,
-    t=function(a) {
-        var b="",
-        c="AM",
-        d=a[3],
-        e=a[4];
-        return d>=12&&(c="PM", d>=13&&(d-=12)),
-        0===d&&(d=12),
-        e=(10>e?"0": "")+e, b=d+":"+e+c
-    }
-    ;
+        for (i in overrideSettings) {
+            newObject[i] = overrideSettings[i];
+        }
+        return newObject;
+    };
+    var isAllDay = function (dateStart, dateEnd) {
+        var dateStartFormatted = getDateFormatted(dateStart)
+            , dateEndFormatted = getDateFormatted(dateEnd);
+        //if start date is midnight and the end date a following day midnight as well
+        if ((dateStartFormatted.getTime() === dateEndFormatted.getTime() - 86400000) && dateStartFormatted.getMinutes() === 0 && dateStartFormatted.getHours() === 0) {
+            return true;
+        }
+        return false;
+    };
+    //Get all necessary data (dates, location, summary, description) and creates a list item
+    var transformationList = function (result, tagName, format) {
+        var dateStart = getDateInfo(result.start.dateTime || result.start.date)
+            , dateEnd = getDateInfo(result.end.dateTime || result.end.date)
+            , moreDaysEvent = (typeof result.end.date !== 'undefined')
+            , dayNames = config.dayNames
+            , isAllDayEvent = isAllDay(dateStart, dateEnd);
+        if (moreDaysEvent) {
+            dateStart = addOneDay(dateStart);
+        }
+        if (isAllDayEvent) {
+            dateEnd = subtractOneMinute(dateEnd);
+        }
+        var dateFormatted = getFormattedDate(dateStart, dateEnd, moreDaysEvent, isAllDayEvent, dayNames)
+            , output = '<' + tagName + '>'
+            , summary = result.summary || ''
+            , description = result.description || ''
+            , location = result.location || ''
+            , i;
+        for (i = 0; i < format.length; i++) {
+            format[i] = format[i].toString();
+            if (format[i] === '*summary*') {
+                output = output.concat('<span class="summary">' + summary + '</span>');
+            }
+            else if (format[i] === '*date*') {
+                output = output.concat('<span class="date">' + dateFormatted + '</span>');
+            }
+            else if (format[i] === '*description*') {
+                output = output.concat('<span class="description">' + description + '</span>');
+            }
+            else if (format[i] === '*location*') {
+                output = output.concat('<span class="location">' + location + '</span>');
+            }
+            else {
+                if ((format[i + 1] === '*location*' && location !== '') || (format[i + 1] === '*summary*' && summary !== '') || (format[i + 1] === '*date*' && dateFormatted !== '') || (format[i + 1] === '*description*' && description !== '')) {
+                    output = output.concat(format[i]);
+                }
+            }
+        }
+        return output + '</' + tagName + '>';
+    };
+    //Check if date is later then now
+    var isPast = function (date) {
+        var compareDate = new Date(date)
+            , now = new Date();
+        if (now.getTime() > compareDate.getTime()) {
+            return true;
+        }
+        return false;
+    };
+    //Get temp array with information abou day in followin format: [day number, month number, year, hours, minutes]
+    var getDateInfo = function (date) {
+        date = new Date(date);
+        return [date.getDate(), date.getMonth(), date.getFullYear(), date.getHours(), date.getMinutes(), 0, 0];
+    };
+    //Get month name according to index
+    var getMonthName = function (month) {
+        var monthNames = [
+            'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        return monthNames[month];
+    };
+    var getDayName = function (day) {
+        var dayNames = [
+          'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+      ];
+        return dayNames[day];
+    };
+    var getDayNameFormatted = function (dateFormatted) {
+        return getDayName(getDateFormatted(dateFormatted).getDay()) + ' ';
+    };
+    var getDateFormatted = function (dateInfo) {
+        return new Date(dateInfo[2], dateInfo[1], dateInfo[0], dateInfo[3], dateInfo[4] + 0, 0);
+    };
+    //Subtract one day
+    var subtractOneDay = function (dateInfo) {
+        var date = getDateFormatted(dateInfo);
+        date.setTime(date.getTime() - 86400000);
+        return getDateInfo(date);
+    };
+    //Subtract one minute
+    var subtractOneMinute = function (dateInfo) {
+        var date = getDateFormatted(dateInfo);
+        date.setTime(date.getTime() - 60000);
+        return getDateInfo(date);
+    };
+    //Transformations for formatting date into human readable format
+    var formatDateSameDay = function (dateStart, dateEnd, moreDaysEvent, isAllDayEvent, dayNames) {
+        var formattedTime = ''
+            , dayNameStart = '';
+        if (dayNames) {
+            dayNameStart = getDayNameFormatted(dateStart);
+        }
+        if (config.sameDayTimes && !moreDaysEvent && !isAllDayEvent) {
+            formattedTime = ' from ' + getFormattedTime(dateStart) + ' - ' + getFormattedTime(dateEnd);
+        }
+        //month day, year time-time
+        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2] + formattedTime;
+    };
+    var formatDateOneDay = function (dateStart, dayNames) {
+        var dayName = '';
+        if (dayNames) {
+            dayName = getDayNameFormatted(dateStart);
+        }
+        //month day, year
+        return dayName + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2];
+    };
+    var formatDateDifferentDay = function (dateStart, dateEnd, dayNames) {
+        var dayNameStart = ''
+            , dayNameEnd = '';
+        if (dayNames) {
+            dayNameStart = getDayNameFormatted(dateStart);
+            dayNameEnd = getDayNameFormatted(dateEnd);
+        }
+        //month day-day, year
+        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + '-' + dayNameEnd + dateEnd[0] + ', ' + dateStart[2];
+    };
+    var formatDateDifferentMonth = function (dateStart, dateEnd, dayNames) {
+        var dayNameStart = ''
+            , dayNameEnd = '';
+        if (dayNames) {
+            dayNameStart = getDayNameFormatted(dateStart);
+            dayNameEnd = getDayNameFormatted(dateEnd);
+        }
+        //month day - month day, year
+        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + '-' + dayNameEnd + getMonthName(dateEnd[1]) + ' ' + dateEnd[0] + ', ' + dateStart[2];
+    };
+    var formatDateDifferentYear = function (dateStart, dateEnd, dayNames) {
+        var dayNameStart = ''
+            , dayNameEnd = '';
+        if (dayNames) {
+            dayNameStart = getDayNameFormatted(dateStart);
+            dayNameEnd = getDayNameFormatted(dateEnd);
+        }
+        //month day, year - month day, year
+        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2] + '-' + dayNameEnd + getMonthName(dateEnd[1]) + ' ' + dateEnd[0] + ', ' + dateEnd[2];
+    };
+    //Check differences between dates and format them
+    var getFormattedDate = function (dateStart, dateEnd, moreDaysEvent, isAllDayEvent, dayNames) {
+        var formattedDate = '';
+        if (dateStart[0] === dateEnd[0]) {
+            if (dateStart[1] === dateEnd[1]) {
+                if (dateStart[2] === dateEnd[2]) {
+                    //month day, year
+                    formattedDate = formatDateSameDay(dateStart, dateEnd, moreDaysEvent, isAllDayEvent, dayNames);
+                }
+                else {
+                    //month day, year - month day, year
+                    formattedDate = formatDateDifferentYear(dateStart, dateEnd, dayNames);
+                }
+            }
+            else {
+                if (dateStart[2] === dateEnd[2]) {
+                    //month day - month day, year
+                    formattedDate = formatDateDifferentMonth(dateStart, dateEnd, dayNames);
+                }
+                else {
+                    //month day, year - month day, year
+                    formattedDate = formatDateDifferentYear(dateStart, dateEnd, dayNames);
+                }
+            }
+        }
+        else {
+            if (dateStart[1] === dateEnd[1]) {
+                if (dateStart[2] === dateEnd[2]) {
+                    //month day-day, year
+                    formattedDate = formatDateDifferentDay(dateStart, dateEnd, dayNames);
+                }
+                else {
+                    //month day, year - month day, year
+                    formattedDate = formatDateDifferentYear(dateStart, dateEnd, dayNames);
+                }
+            }
+            else {
+                if (dateStart[2] === dateEnd[2]) {
+                    //month day - month day, year
+                    formattedDate = formatDateDifferentMonth(dateStart, dateEnd, dayNames);
+                }
+                else {
+                    //month day, year - month day, year
+                    formattedDate = formatDateDifferentYear(dateStart, dateEnd, dayNames);
+                }
+            }
+        }
+        return formattedDate;
+    };
+    var getFormattedTime = function (date) {
+        var formattedTime = ''
+            , period = 'AM'
+            , hour = date[3]
+            , minute = date[4];
+        // Handle afternoon.
+        if (hour >= 12) {
+            period = 'PM';
+            if (hour >= 13) {
+                hour -= 12;
+            }
+        }
+        // Handle midnight.
+        if (hour === 0) {
+            hour = 12;
+        }
+        // Ensure 2-digit minute value.
+        minute = (minute < 10 ? '0' : '') + minute;
+        // Format time.
+        formattedTime = hour + ':' + minute + period;
+        return formattedTime;
+    };
+    //Add one day
+    var addOneDay = function (dateInfo) {
+        var date = getDateFormatted(dateInfo);
+        date.setTime(date.getTime() + 86400000);
+        return getDateInfo(date);
+    };
     return {
-        init:function(a) {
-            var c= {
-                calendarUrl: "https://www.googleapis.com/calendar/v3/calendars/milan.kacurak@gmail.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY", past: !0, upcoming: !0, sameDayTimes: !0, dayNames: !0, pastTopN: -1, upcomingTopN: -1, itemsTagName: "li", upcomingSelector: "#events-upcoming", pastSelector: "#events-past", upcomingHeading: "<h2>Upcoming events</h2>", pastHeading: "<h2>Past events</h2>", format: ["*date*", ": ", "*summary*", " &mdash; ", "*description*", " in ", "*location*"]
-            }
-            ;
-            c=d(c, a),
-            b(c)
+        init: function (settingsOverride) {
+            var settings = {
+                calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/milan.kacurak@gmail.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY'
+                , past: true
+                , upcoming: true
+                , sameDayTimes: true
+                , dayNames: true
+                , pastTopN: -1
+                , upcomingTopN: -1
+                , itemsTagName: 'li'
+                , upcomingSelector: '#events-upcoming'
+                , pastSelector: '#events-past'
+                , upcomingHeading: '<h2>Upcoming events</h2>'
+                , pastHeading: '<h2>Past events</h2>'
+                , format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*']
+            };
+            settings = mergeOptions(settings, settingsOverride);
+            init(settings);
         }
-    }
-}
-
-();
+    };
+})();
