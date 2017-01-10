@@ -117,7 +117,7 @@
     .upcoming-events {
         top: 0;
         left: 0;
-        width: 30vw;
+        width: 20vw;
     }
     
     @media screen {
@@ -130,6 +130,7 @@
         position: relative;
         display: block;
         width: 100%;
+        padding-left: 15px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -285,6 +286,12 @@
         }
     }
     
+    @media (min-width: 1200px) {
+        .container {
+            width: 85vw;
+        }
+    }
+    
     @media screen and (max-width: 445px) {
         .media-body,
         .media-left {
@@ -300,4 +307,9 @@
         .media-heading {
             text-align: center;
         }
+    }
+    
+    .page-content {
+        margin-left: 20vw;
+        padding-left: 10px;
     }
