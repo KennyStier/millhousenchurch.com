@@ -88,6 +88,17 @@
                 <!--   </ul> -->
                 <div class="span3 fullWidth767">
                     <ul id="events-upcoming" class="list1"></ul> <a href="/calendar/" class="upcoming-events-subtext">View Full Calendar</a> </div>
+                <div class="photo-gallery">
+                    <h3>Photo Gallery</h3> <span id="random_image">
+  <script type="text/javascript"
+      src="//icgallery.flexstart.me/piwigo-random-backend.php"
+      async>
+  </script>
+                    </span>
+                    <a href="https://icgallery.flexstart.me/">
+                        <p>View and submit photos from recent parish activities</p>
+                    </a>
+                </div>
             </div>
             <div class="page-content co-md-6">
                 <h3>Mission Statement</h3>
@@ -141,13 +152,13 @@
     <script src="/js/outdated-browser.js"></script>
     <script>
         $.fn.extend({
-    animateCss: function (animationName) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        this.addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    $(this).removeClass('animated ' + animationName);
+                });
+            }
         });
-    }
-});
     </script>
 </body>
 
