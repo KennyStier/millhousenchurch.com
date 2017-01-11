@@ -317,3 +317,9 @@
     #random-photo {
         padding: 10px;
     }
+    
+    .fa-google,
+    .fa-facebook-square {
+        color: snow;
+        padding: 10px;
+    }
