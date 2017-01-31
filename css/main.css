@@ -125,6 +125,30 @@
         padding-left: 10px;
     }
     
+    @media screen and (max-width: 1549px) {
+        .upcoming-events {
+            top: 0;
+            left: 0;
+            width: 25vw;
+        }
+        .page-content {
+            margin-left: 25vw;
+            padding-left: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 1239px) {
+        .upcoming-events {
+            top: 0;
+            left: 0;
+            width: 30vw;
+        }
+        .page-content {
+            margin-left: 30vw;
+            padding-left: 10px;
+        }
+    }
+    
     @media screen {
         body>div#left-sidebar {
             position: fixed;
