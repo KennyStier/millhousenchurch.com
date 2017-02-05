@@ -390,3 +390,34 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    
+    .event {
+        padding: 10px;
+        border-top: 1px solid #9D9D9D;
+        text-align: center;
+        height: 264px;
+    }
+    
+    .detail-circle {
+        width: 40px;
+        height: 40px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        background-color: #080808;
+        border: 2px solid snow;
+        position: relative;
+    }
+    
+    .detail-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .event-column {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
