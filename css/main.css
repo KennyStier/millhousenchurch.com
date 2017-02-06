@@ -391,13 +391,6 @@
         transform: translate(-50%, -50%);
     }
     
-    .event {
-        padding: 10px;
-        border-top: 1px solid #9D9D9D;
-        text-align: center;
-        height: 264px;
-    }
-    
     .detail-circle {
         width: 40px;
         height: 40px;
@@ -417,7 +410,39 @@
     }
     
     .event-column {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 254px;
+        text-align: center;
+    }
+    /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+    /* Carousel base class */
+    
+    .carousel {
+        height: 500px;
+        margin-bottom: 60px;
+    }
+    /* Since positioning the image, we need to help out the caption */
+    
+    .carousel-caption {
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+    }
+    /* Declare heights because of positioning of img element */
+    
+    .carousel .item {
+        height: 500px;
+        /* background-image: url(http://millhousenchurch.com/img/content_bg.jpg); */
+        background-color: black;
+    }
+    
+    .carousel-inner > .item > img {
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        min-width: 500px;
+        max-height: 500px;
     }
