@@ -1,13 +1,13 @@
     body {
         color: snow;
         font-family: 'Raleway', serif;
-        background-image: url(http://millhousenchurch.com/img/content_bg.jpg);
+        background-image: url(/img/content_bg.jpg);
         width: 100vw;
         overflow-x: hidden;
     }
     
     nav {
-        background-image: url(http://millhousenchurch.com/img/content_bg.jpg);
+        background-image: url(/img/content_bg.jpg);
         border: 0px 0px 0px 0px;
         width: 100vw;
     }
@@ -56,7 +56,7 @@
     }
     
     .etched-pattern {
-        background-image: url(http://millhousenchurch.com/img/content_bg.jpg);
+        background-image: url(/img/content_bg.jpg);
         width: 100%;
         height: 100%
     }
@@ -69,7 +69,7 @@
         content: '';
         width: 100%;
         height: 5px;
-        background: url(http://millhousenchurch.com/img/footer_bg.png) center top repeat-x;
+        background: url(/img/footer_bg.png) center top repeat-x;
     }
     
     .quick-info {
@@ -435,7 +435,7 @@
     
     .carousel .item {
         height: 500px;
-        /* background-image: url(http://millhousenchurch.com/img/content_bg.jpg); */
+        /* background-image: url(/img/content_bg.jpg); */
         background-color: black;
     }
     
