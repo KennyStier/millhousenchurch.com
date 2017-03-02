@@ -8,18 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Browse our collection of bulletins from the past.">
     <link rel="icon" href="/img/church-favicon.png">
-    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         html {
-            color: snow;
+            color: black;
             font-size: 1em;
             font-family: 'Raleway', sans-serif;
         }
@@ -30,11 +23,11 @@
         
         a {
             text-decoration: none;
-            color: snow;
+            color: black;
         }
         
         a:hover {
-            color: gainsboro;
+            color: black;
         }
         
         header h1 {
@@ -62,7 +55,7 @@
         }
         
         tr:hover td {
-            background: rgb(100, 100, 100);
+            background: rgb(225, 225, 225);
         }
         
         th {
@@ -93,10 +86,14 @@
             padding: 10px 0;
             outline: 0;
             border: 0;
-            border-bottom: 1px solid #edf1f5;
+            border-bottom: 1px solid #040303;
             vertical-align: middle;
             text-align: left;
             transition: background 300ms ease;
+        }
+        
+        .branding-header {
+            text-align: center;
         }
         /* Mobile first */
         /* --- >= smartphones landscape --- */
@@ -129,64 +126,11 @@
 <body>
     <header>
         <div class="row branding-header">
-            <div class="col-md-3 brand-left"><img class="brand" src="/img/church-logo.svg" alt="Immaculate Conception Logo"></div>
-            <div class="col-md-6">
-                <div class="brand-txt">
-                    <h1>Immaculate Conception Church</h1>
-                    <h2>Millhousen, Indiana</h2> </div>
-            </div>
-            <div class="col-md-3 brand-right">
-                <div class="quick-info">
-                    <ul>
-                        <li>PLC: Sister Donna Prickel</li>
-                        <li id="mass">Mass: Sunday at 8 AM</li>
-                        <li><a href="tel:8125912362">(812) 591-2362</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <a href="/">
+                <h1>Immaculate Conception, Millhousen</h1></a>
+            <h2>Bulletin Archive</h2> </div>
     </header>
     <div class="etched-pattern">
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="nav">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/about/staff/">Staff</a></li>
-                                <li><a href="/about/lay-leadership/">Lay Leadership</a></li>
-                                <li><a href="/about/history/">Parish History</a></li>
-                                <li><a href="javascript:void(0);" onclick="$('#mass').animateCss('wobble');">Mass</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/about/directions/">Directions</a></li>
-                                <li><a href="/about/contact/">Contact</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faith Formation <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/faith-formation/elementary/">Pre-K thru 5th Grade</a></li>
-                                <li><a href="/faith-formation/high-school/">6th thru 12th Grade</a></li>
-                                <li><a href="/faith-formation/adult/">Adult Education</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/faith-formation/rcia/">RCIA</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/sacraments/">Sacraments</a></li>
-                        <li><a href="/calendar/">Events Calendar</a></li>
-                        <li><a href="/bulletins/">Bulletins</a></li>
-                        <li><a href="/ministry-schedule/">Ministry Schedule</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
         <main>
             <table>
                 <tr>
@@ -215,21 +159,23 @@
                     <td>{{.HumanModTime "02.01.2006 15:04:05"}}</td>
                 </tr> {{end}} </table>
         </main>
-        <script>
-            var rows = document.getElementsByTagName('tr');
-            var max = rows.length;
-            var index;
-            for (index = 1; index < max; index++) {
-                rows[index].onclick = function (event) {
-                    if (event.which == 1) {
-                        location.href = this.getElementsByTagName('a')[0].getAttribute('href');
-                    }
-                    if (event.which == 2) {
-                        window.open(this.getElementsByTagName('a')[0].getAttribute('href'));
-                    }
+    </div>
+    <script>
+        var rows = document.getElementsByTagName('tr');
+        var max = rows.length;
+        var index;
+        for (index = 1; index < max; index++) {
+            rows[index].onclick = function (event) {
+                if (event.which == 1) {
+                    location.href = this.getElementsByTagName('a')[0].getAttribute('href');
+                }
+                if (event.which == 2) {
+                    window.open(this.getElementsByTagName('a')[0].getAttribute('href'));
                 }
             }
-        </script>
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
