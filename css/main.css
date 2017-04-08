@@ -1,7 +1,7 @@
     body {
         color: snow;
         font-family: 'Raleway', serif;
-        background-color: #0B3954;
+        background-color: #1a2930;
         width: 100%;
         overflow-x: hidden;
     }
@@ -392,6 +392,7 @@
     
     .navbar {
         border-radius: 0px;
+        margin-bottom: 0px;
     }
     /* https://work.smarchal.com/twbscolor/css/0275d80269c2f2f2f2dfdddd1 */
     
@@ -501,4 +502,12 @@
             color: #f7ce3e;
             background-color: #0a1612;
         }
+    }
+    
+    .sidebar {
+        background-color: #1a2930;
+    }
+    
+    .page-content {
+        background-color: #0b3954;
     }
