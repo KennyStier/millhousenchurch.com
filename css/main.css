@@ -1,20 +1,20 @@
     body {
-        color: snow;
-        font-family: 'Raleway', serif;
-        background-color: #1a2930;
+        color: #000000;
+        font-family: 'Raleway', sans-serif;
+        background-color: snow;
         width: 100%;
         overflow-x: hidden;
     }
     
     .branding-header {
-        background-color: #080808;
-        color: snow;
+        background-color: snow;
+        color: #000000;
         width: 100%;
         margin: 0px;
     }
     
     .brand {
-        height: 150px;
+        height: 120px;
         display: block;
         margin: auto;
     }
@@ -24,16 +24,20 @@
         text-align: center;
         justify-content: center;
         flex-direction: column;
-        height: 150px;
+        height: 120px;
     }
     
     .brand-txt h1 {
-        font-size: 2.3em;
-        margin-top: 10px;
+        font-size: 4em;
+        margin-top: 5px;
+        font-family: 'Grand Hotel', cursive;
+        margin-bottom: 5px;
     }
     
     .brand-txt h2 {
-        font-size: 1.6em;
+        margin-top: 3px;
+        font-size: 1.4em;
+        font-weight: 600;
     }
     
     .brand-right {
@@ -49,15 +53,17 @@
         text-align: center;
         justify-content: center;
         flex-direction: column;
-        height: 150px;
+        height: 120px;
     }
     
     .quick-info li {
         list-style-type: none;
+        font-weight: bold;
     }
     
     .quick-info li a {
-        color: #9D9D9D;
+        color: #232323;
+        font-weight: normal;
     }
     /* Sticky footer styles
 -------------------------------------------------- */
@@ -85,132 +91,10 @@
     .text-muted {
         margin-top: 10px;
     }
-    /*
-    
-    .list1 {
-        position: relative;
-        display: block;
-        width: 100%;
-        padding-left: 15px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 5px;
-        -webkit-border-radius: 1px;
-        -moz-border-radius: 1px;
-        border-radius: 1px;
-        border: 1px solid transparent;
-        background: #00679a;
-        list-style: none;
-    }
-    
-    .list1 li {
-        position: relative;
-        border: 1px solid #43a9dd;
-        border-bottom-color: transparent;
-        margin: 0px 0px 1px 0px;
-        padding: 6px 9px 9px 9px;
-        background-color: #0d87c4;
-        background-image: -moz-linear-gradient(top, #057db9, #1996d5);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#057db9), to(#1996d5));
-        background-image: -webkit-linear-gradient(top, #057db9, #1996d5);
-        background-image: -o-linear-gradient(top, #057db9, #1996d5);
-        background-image: linear-gradient(to bottom, #057db9, #1996d5);
-        background-repeat: repeat-x;
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff057db9', endColorstr='#ff1996d5', GradientType=0);
-    }
-    
-    .list1 li:first-child {
-        margin-top: 0px;
-        background-color: #0981be;
-        background-image: -moz-linear-gradient(top, #057db9, #0e88c5);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#057db9), to(#0e88c5));
-        background-image: -webkit-linear-gradient(top, #057db9, #0e88c5);
-        background-image: -o-linear-gradient(top, #057db9, #0e88c5);
-        background-image: linear-gradient(to bottom, #057db9, #0e88c5);
-        background-repeat: repeat-x;
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff057db9', endColorstr='#ff0e88c5', GradientType=0);
-    }
-    
-    .list1 li:first-child + li {
-        background-color: #128ecb;
-        background-image: -moz-linear-gradient(top, #0e88c5, #1996d5);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0e88c5), to(#1996d5));
-        background-image: -webkit-linear-gradient(top, #0e88c5, #1996d5);
-        background-image: -o-linear-gradient(top, #0e88c5, #1996d5);
-        background-image: linear-gradient(to bottom, #0e88c5, #1996d5);
-        background-repeat: repeat-x;
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff0e88c5', endColorstr='#ff1996d5', GradientType=0);
-    }
-    
-    .list1 li:first-child + li + li {
-        background-color: #1490ce;
-        background-image: -moz-linear-gradient(top, #1996d5, #0d87c4);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1996d5), to(#0d87c4));
-        background-image: -webkit-linear-gradient(top, #1996d5, #0d87c4);
-        background-image: -o-linear-gradient(top, #1996d5, #0d87c4);
-        background-image: linear-gradient(to bottom, #1996d5, #0d87c4);
-        background-repeat: repeat-x;
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff1996d5', endColorstr='#ff0d87c4', GradientType=0);
-    }
-    
-    .list1 li:first-child + li + li + li {
-        background-color: #0a83c0;
-        background-image: -moz-linear-gradient(top, #0d87c4, #057db9);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0d87c4), to(#057db9));
-        background-image: -webkit-linear-gradient(top, #0d87c4, #057db9);
-        background-image: -o-linear-gradient(top, #0d87c4, #057db9);
-        background-image: linear-gradient(to bottom, #0d87c4, #057db9);
-        background-repeat: repeat-x;
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff0d87c4', endColorstr='#ff057db9', GradientType=0);
-    }
-    
-    .list1 li.last {
-        border-bottom-color: #43a9dd;
-        padding-bottom: 22px;
-        margin-bottom: 0;
-    }
-    
-    .list1 li div {
-        overflow: hidden;
-    }
-    
-    .list1 li div h3 {
-        color: #ffffff;
-        margin: 9px 0 7px;
-    }
-    
-    .list1 li div h3 a {
-        color: inherit;
-    }
-    
-    .list1 li div h3 a:hover {
-        color: #000000;
-    }
-    
-    .list1 li div p {
-        color: #c8c8c8;
-        padding: 0;
-        margin: 0;
-    }
-    */
-    
-    .list1 li {
-        background-color: #333;
-        list-style-type: none;
-        padding: 5px;
-    }
-    
-    .list1 {
-        padding-left: 0px;
-    }
     
     @media screen and (max-width: 991px) {
         .brand-right {
             display: none;
-        }
-        .upcoming-events {
-            width: 100%;
         }
         .brand-txt {
             margin-left: 10px;
@@ -359,155 +243,341 @@
         height: 254px;
         text-align: center;
     }
-    /* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-    /* Carousel base class */
-    
-    .carousel {
-        height: 500px;
-        margin-bottom: 60px;
+    /*   .carousel {
+        background: #2f4357;
     }
-    /* Since positioning the image, we need to help out the caption */
+    
+    .carousel .item img {
+        margin: 0 auto;
+        Align slide image horizontally center 
+    } */
+    
+    .img-slide1 {
+        background-image: url(/img/modern-church-full.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .img-slide2 {
+        background-image: url(https://images.unsplash.com/photo-1474816734820-13ad2a6ba010?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=dckbo-9o7ga-josh-applegate.jpg&s=5f62c008603875492635fce6f149b805);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .img-slide3 {
+        background-image: url(/img/fr-dan-speaker.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 0px;
+    }
+    
+    .carousel-indicators li {
+        border: 1px rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    .carousel-indicators .active {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
     
     .carousel-caption {
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 5px;
-    }
-    /* Declare heights because of positioning of img element */
-    
-    .carousel .item {
-        height: 500px;
-        /* background-image: url(/img/content_bg.jpg); */
-        background-color: black;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: initial;
+        text-align: center;
+        right: 33%;
+        text-align: center;
+        max-width: 33%;
+        left: 33%;
     }
     
-    .carousel-inner > .item > img {
-        top: 0;
-        left: 0;
-        margin: 0 auto;
-        min-width: 500px;
-        max-height: 500px;
+    .carousel-caption p {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 1.7em;
+        font-weight: 600;
+        color: snow;
+        text-shadow: none;
+    }
+    
+    .btn {
+        padding: 5px 25px;
+        border: 0 none;
+        font-weight: 600;
+        font-size: 1.5em;
+        background-color: #ffffff;
+        border-radius: 3px;
+    }
+    
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+        outline: 0 none;
+    }
+    
+    .btn-primary {
+        background: #0099cc;
+        color: #ffffff;
+    }
+    
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+        background: #33a6cc;
+    }
+    
+    .btn-primary:active,
+    .btn-primary.active {
+        background: #007299;
+        box-shadow: none;
     }
     
     .navbar {
         border-radius: 0px;
         margin-bottom: 0px;
     }
-    /* https://work.smarchal.com/twbscolor/css/0275d80269c2f2f2f2dfdddd1 */
+    /* https://work.smarchal.com/twbscolor/css/dfdfdfefefef0000000000001 */
     
     .navbar-default {
-        background-color: #1a2930;
-        border-color: #0a1612;
+        background-color: #dfdfdf;
+        border-color: #efefef;
     }
     
     .navbar-default .navbar-brand {
-        color: #c5c1c0;
+        color: #000000;
     }
     
     .navbar-default .navbar-brand:hover,
     .navbar-default .navbar-brand:focus {
-        color: #f7ce3e;
+        color: #000000;
     }
     
     .navbar-default .navbar-text {
-        color: #c5c1c0;
+        color: #000000;
     }
     
     .navbar-default .navbar-nav > li > a {
-        color: #c5c1c0;
+        color: #000000;
     }
     
     .navbar-default .navbar-nav > li > a:hover,
     .navbar-default .navbar-nav > li > a:focus {
-        color: #f7ce3e;
+        color: #000000;
     }
     
     .navbar-default .navbar-nav > li > .dropdown-menu {
-        background-color: #1a2930;
+        background-color: #dfdfdf;
     }
     
     .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-        color: #c5c1c0;
+        color: #000000;
     }
     
     .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
     .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-        color: #f7ce3e;
-        background-color: #0a1612;
+        color: #000000;
+        background-color: #efefef;
     }
     
     .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-        background-color: #0a1612;
+        background-color: #efefef;
     }
     
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-        color: #f7ce3e;
-        background-color: #0a1612;
+        color: #000000;
+        background-color: #efefef;
     }
     
     .navbar-default .navbar-nav > .active > a,
     .navbar-default .navbar-nav > .active > a:hover,
     .navbar-default .navbar-nav > .active > a:focus {
-        color: #f7ce3e;
-        background-color: #0a1612;
+        color: #000000;
+        background-color: #efefef;
     }
     
     .navbar-default .navbar-nav > .open > a,
     .navbar-default .navbar-nav > .open > a:hover,
     .navbar-default .navbar-nav > .open > a:focus {
-        color: #f7ce3e;
-        background-color: #0a1612;
+        color: #000000;
+        background-color: #efefef;
     }
     
     .navbar-default .navbar-toggle {
-        border-color: #0a1612;
+        border-color: #efefef;
     }
     
     .navbar-default .navbar-toggle:hover,
     .navbar-default .navbar-toggle:focus {
-        background-color: #0a1612;
+        background-color: #efefef;
     }
     
     .navbar-default .navbar-toggle .icon-bar {
-        background-color: #c5c1c0;
+        background-color: #000000;
     }
     
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
-        border-color: #c5c1c0;
+        border-color: #000000;
     }
     
     .navbar-default .navbar-link {
-        color: #c5c1c0;
+        color: #000000;
     }
     
     .navbar-default .navbar-link:hover {
-        color: #f7ce3e;
+        color: #000000;
     }
     
     @media (max-width: 767px) {
         .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-            color: #c5c1c0;
+            color: #000000;
         }
         .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
         .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-            color: #f7ce3e;
+            color: #000000;
         }
         .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
         .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
         .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-            color: #f7ce3e;
-            background-color: #0a1612;
+            color: #000000;
+            background-color: #efefef;
         }
     }
     
-    .sidebar {
-        background-color: #1a2930;
+    .gray-stripe {
+        background-color: #dfdfdf;
     }
     
-    .page-content {
-        background-color: #0b3954;
+    .stripe {
+        font-weight: 200;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .stripe h2 {
+        text-align: center;
+        margin-top: 0px;
+        font-weight: 200;
+        font-size: 2.5em;
+    }
+    
+    .stripe p,
+    .stripe ul li {
+        font-size: 1.5em;
+    }
+    
+    .lead-line {
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    .mission-statement ul {
+        text-align: left;
+    }
+    
+    .upcoming-events ul {
+        width: 700px;
+        /* change it to whatever you like */
+        position: relative;
+        /* these should be probably already set up by `reset.css` */
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .upcoming-events ul:before,
+    .upcoming-events ul:after {
+        text-align: center;
+        display: block;
+        border: none;
+        border-bottom: 0;
+        width: 48%;
+    }
+    
+    .upcoming-events ul:before {
+        border-right: 0;
+    }
+    
+    .upcoming-events ul:after {
+        position: absolute;
+        top: 0;
+        left: 48%;
+        margin-left: 1px;
+    }
+    
+    .upcoming-events li {
+        text-align: right;
+        width: 48%;
+        float: left;
+        border: none;
+        margin-bottom: -1px;
+    }
+    
+    .upcoming-events li:nth-child(even) {
+        margin-left: -1px;
+    }
+    
+    .upcoming-events h2 {
+        padding-bottom: 10px;
+    }
+    
+    .upcoming-events h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    span {
+        display: table;
+        margin: 0 auto;
+    }
+    
+    .date {
+        font-size: 16px;
+        font-weight: 200;
+    }
+    
+    .upcoming-events {
+        display: inline-block;
     }
