@@ -2,30 +2,31 @@
 <html lang="en">
 
 <head>
-  {{.Include "/templates/head.html"}}
+    {{.Include "/templates/head.html"}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" />
     <title>Events Calendar - Immaculate Conception Church</title>
     <meta name="description" content="View the calendar of events to catch up on what is going on.">
 </head>
 
 <body>
-  {{.Include "/templates/header.html"}}
-        <div class="container">
-            <h1>Events Calendar</h1>
-            <div id='calendar'>
-                <p><a href="http://www.google.com/calendar/render?cid=http://www.google.com/calendar/feeds/millhousenchurch.com_9og4v0j9kgl200r65quv01d65c@group.calendar.google.com/public/basic" target="_blank">Add</a> our calendar to your Google account for easy access through the Google Calendar app!</p>
-            </div>
+    {{.Include "/templates/header.html"}}
+    <div class="container">
+        <h1>Events Calendar</h1>
+        <div id='calendar'>
+            <p><a href="http://www.google.com/calendar/render?cid=http://www.google.com/calendar/feeds/millhousenchurch.com_9og4v0j9kgl200r65quv01d65c@group.calendar.google.com/public/basic" target="_blank">Add</a> our calendar to your Google account for easy access through the Google Calendar app!</p>
         </div>
-        
-        {{.Include "/templates/footer.html"}}
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/gcal.js"></script>
+    {{.Include "/templates/footer.html"}}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/gcal.js"></script>
     <script type='text/javascript'>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#calendar').fullCalendar({
-                googleCalendarApiKey: 'AIzaSyAzEfSIZVELF5T1ZDrd-xwWNwRc69s-Zm8'
-                , events: {
+                googleCalendarApiKey: 'AIzaSyAzEfSIZVELF5T1ZDrd-xwWNwRc69s-Zm8',
+                events: {
                     googleCalendarId: 'millhousenchurch.com_9og4v0j9kgl200r65quv01d65c@group.calendar.google.com'
                 }
             });

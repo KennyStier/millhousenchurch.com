@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  		{{.Include "/templates/head.html"}}
+    {{.Include "/templates/head.html"}}
     <title>Immaculate Conception Church | Millhousen, IN</title>
     <meta name="description" content="Built at the center of a German Catholic community, Immaculate Conception has been the heart of Millhousen since 1834.">
 </head>
 
 <body>
-    		{{.Include "/templates/header.html"}}
+    {{.Include "/templates/header.html"}}
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
@@ -18,21 +18,21 @@
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="img-slide2">
-                    <div class="carousel-caption">
-                        <p>Join us for Mass every Sunday at 8 AM!</p>
-                        <a href="/about/directions/">
-                            <button type="button" class="btn btn-default">Get Directions</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
                 <div class="img-slide3">
                     <div class="carousel-caption">
                         <p>The parish auction is approaching quickly!</p>
                         <a href="/events/auction/">
                             <button type="button" class="btn btn-default">Learn More</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img-slide2">
+                    <div class="carousel-caption">
+                        <p>Join us for Mass every Sunday at 8 AM!</p>
+                        <a href="/about/directions/">
+                            <button type="button" class="btn btn-default">Get Directions</button>
                         </a>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
         </a>
         <div class="stripe white-stripe">
             <h2>Catholic Community</h2>
-            <h3>Our Cohort</h3>
+            <h3 id="cohort">Our Cohort</h3>
             <div class="row">
                 <div class="col-md-4"><img src="https://www.archindy.org/parishes/files/parish-photos/103.jpg" alt="St. Maurice Napoleon" height="200" />
                     <h4>St. Maurice</h4>
@@ -178,7 +178,7 @@
             </div>
         </div>
     </div>
-    		{{.Include "/templates/footer.html"}}
+    {{.Include "/templates/footer.html"}}
     <script src="/js/format-google-calendar.js"></script>
     <script>
         formatGoogleCalendar.init({
