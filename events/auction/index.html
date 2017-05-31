@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{.Include "/templates/head.html"}}
+    <title>Auction - Immaculate Conception Church</title>
+    <meta name="description" content="Educating the youth from preschool to 5th grade to help them learn, live, and grow in the Catholic faith.">
+</head>
+
+<body>
+    {{.Include "/templates/header.html"}}
+
+    <div class="container">
+        <h1>Immaculate Conception Auction</h1>
+        <p>The auction is quickly approaching, and the event is being planned. More details to come following the June 11th meeting.</p>
+
+        <div class="stripe gray-stripe auction-album">
+            <h3>Auction 2016 Photos</h3> <span id="random_image">
+  <script type="text/javascript"
+      src="//icgallery.flexstart.me/piwigo-random-backend.php?maximages=6&size=xsmall&cat_id=3"
+      async>
+  </script>
+                    </span>
+            <a href="https://icgallery.flexstart.me/index.php?/category/3">
+                <button type="button" class="btn btn-default">View Full Album</button>
+            </a>
+        </div>
+    </div>
+
+    {{.Include "/templates/footer.html"}}
+
+</body>
+
+</html>
