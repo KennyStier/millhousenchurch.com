@@ -716,7 +716,7 @@
     .facebook-embed {
         border: none;
         overflow: hidden;
-        height: 450px;
+        height: 425px;
         width: 420px;
     }
     
@@ -834,4 +834,15 @@
         .facebook-embed {
             width: 90%;
         }
+    }
+    
+    .fw-iframe {
+        width: 90%;
+        height: 325px;
+        border: none;
+        padding-top: 30px;
+    }
+    
+    .auction-album {
+        border-radius: 30px;
     }
