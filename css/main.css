@@ -267,7 +267,7 @@
     }
     
     .img-slide2 {
-        background-image: url(https://images.unsplash.com/photo-1474816734820-13ad2a6ba010?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=dckbo-9o7ga-josh-applegate.jpg&s=5f62c008603875492635fce6f149b805);
+        background-image: url(/img/altar.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
@@ -845,4 +845,14 @@
     
     .auction-album {
         border-radius: 30px;
+    }
+    
+    .page-photo {
+        border-radius: 10px;
+    }
+    
+    .nocentre-list {
+        text-align: left;
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
