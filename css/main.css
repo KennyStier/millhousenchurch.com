@@ -36,7 +36,7 @@
     
     .brand-txt h2 {
         margin-top: 3px;
-        font-size: 1.4em;
+        font-size: 20px;
         font-weight: 600;
     }
     
@@ -327,7 +327,7 @@
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         padding: 15px;
-        font-size: 1.7em;
+        font-size: 24px;
         font-weight: 600;
         color: snow;
         text-shadow: none;
@@ -337,7 +337,7 @@
         padding: 5px 25px;
         border: 1px;
         font-weight: 600;
-        font-size: 1.5em;
+        font-size: 21px;
         background-color: #ffffff;
         border-radius: 3px;
         margin: 10px 10px 10px 10px;
@@ -556,12 +556,12 @@
         text-align: center;
         margin-top: 0px;
         font-weight: 200;
-        font-size: 2.5em;
+        font-size: 35px;
     }
     
     .stripe p,
     .stripe ul li {
-        font-size: 1.5em;
+        font-size: 21px;
     }
     
     .lead-line {
@@ -730,10 +730,10 @@
             height: 100px;
         }
         .brand-txt h1 {
-            font-size: 3.3em;
+            font-size: 46px;
         }
         .brand-txt h2 {
-            font-size: 1.2em;
+            font-size: 17px;
         }
         .quick-info {
             height: 100px;
