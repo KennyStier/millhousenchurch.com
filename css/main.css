@@ -856,3 +856,13 @@
         margin-left: 10vw;
         margin-right: 10vw;
     }
+    
+    .facebook-embed,
+    .daily-readings {
+        overflow-y: hidden;
+        border: none
+    }
+    
+    .daily-readings {
+        overflow: hidden;
+    }
