@@ -867,3 +867,7 @@
     .daily-readings {
         overflow: hidden;
     }
+    
+    .history-timeline {
+        border: 0;
+    }
