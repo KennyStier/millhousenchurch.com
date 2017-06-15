@@ -299,6 +299,23 @@
         transform-style: preserve-3d;
     }
     
+    .img-slide4 {
+        background: /* top, transparent red, faked with gradient */
+        linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), /* bottom, image */
+        url(/img/ncyc-adoration.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
     .carousel-indicators {
         margin-bottom: 0px;
     }
