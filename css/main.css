@@ -86,11 +86,14 @@
         min-height: 60px;
         background-color: #bcbcbc;
         color: #000000;
+        padding-top: 20px;
     }
     
     .text-muted {
-        margin-top: 20px;
+        text-align: center;
     }
+    
+    .muted-parent {}
     /* @media screen and (max-width: 991px) {
         .brand-right {
             display: none;
@@ -552,6 +555,10 @@
         text-align: center;
     }
     
+    .stripe:nth-last-child(1) {
+        margin-bottom: 20px;
+    }
+    
     .stripe h2 {
         text-align: center;
         margin-top: 0px;
@@ -878,4 +885,60 @@
     
     .top-subtitle {
         margin-bottom: 0px;
+    }
+    
+    .business-card-uno {
+        width: 250px;
+        margin: 0 auto;
+    }
+    
+    .media-body-uno,
+    .media-left-uno {
+        display: block;
+        width: 100%;
+    }
+    
+    .profile-img-uno {
+        margin: 0 auto;
+    }
+    
+    .profile-img-uno,
+    .job-uno,
+    .mail-uno,
+    .media-heading-uno {
+        text-align: center;
+    }
+    
+    .ncyc {
+        color: white;
+        background-image: url(/img/ncyc-adoration.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        min-height: 100vh;
+        padding: 0px;
+    }
+    
+    .ncyc-content {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: 600;
+        color: snow;
+        text-shadow: none;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    .ncyc-promo {
+        width: 80vw;
+        height: 50vh
     }
