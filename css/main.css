@@ -871,3 +871,11 @@
     .history-timeline {
         border: 0;
     }
+    
+    .main-title {
+        margin-top: 0px;
+    }
+    
+    .top-subtitle {
+        margin-bottom: 0px;
+    }

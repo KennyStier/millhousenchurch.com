@@ -10,21 +10,43 @@
 <body>
     {{.Include "/templates/header.html"}}
 
-    <div class="container">
-        <h1>Immaculate Conception Auction</h1>
-        <p>The auction is quickly approaching, and the event is being planned. More details to come following the June 11th meeting.</p>
 
-        <div class="stripe gray-stripe auction-album">
-            <h3>Auction 2016 Photos</h3> <span id="random_image">
+
+    <div class="stripe gray-stripe">
+        <p class="top-subtitle">The 9th Annual</p>
+        <h1 class="main-title">Immaculate Conception Community Auction</h1>
+        <p>Saturday, August 12th 2017 beginning at 9:30am</p>
+    </div>
+
+    <div class="stripe white-stripe">
+        <h2>Now accepting reservations of consignments!</h2>
+        <p>Contact one of the volunteers below by July 8th to get your items listed on the sale bill and other advertisements.</p>
+        <p>Brian Huff - <a href="tel:8126145159">(812) 614-5159</a></p>
+        <p>Jeff Chandler - <a href="tel:8125913812">(812) 591-3812</a></p>
+        <p>Tim Scheidler - <a href="tel:8126141742">(812) 614-1742</a></p>
+        <p>Norbert Bedel - <a href="tel:8126140198">(812) 614-0198</a></p>
+        <div class="container">
+            <h3>Full Consignment Request</h3>
+            <object data="consignment-request.pdf" type="application/pdf" width="100%" height="800">
+                <p>This browser does not support PDFs. Please <a href="consignment-request.pdf">download the PDF</a> to view it.</p>
+            </object></div>
+        <a href="http://www.auctionzip.com/cgi-bin/auctionview.cgi?lid=2930218&kwd=Immaculate%2520Conception&zip=47240&category=0" class="btn btn-inv">
+                            View More on AuctionZip
+                        </a>
+    </div>
+
+
+
+    <div class="stripe gray-stripe">
+        <h3>Auction 2016 Photos</h3> <span id="random_image">
   <script type="text/javascript"
       src="//icgallery.flexstart.me/piwigo-random-backend.php?maximages=6&size=2small&cat_id=3"
       async>
   </script>
                     </span>
-            <a href="https://icgallery.flexstart.me/index.php?/category/3">
-                <button type="button" class="btn btn-default">View Full Album</button>
-            </a>
-        </div>
+        <a href="https://icgallery.flexstart.me/index.php?/category/3">
+            <button type="button" class="btn btn-default">View Full Album</button>
+        </a>
     </div>
 
     {{.Include "/templates/footer.html"}}
