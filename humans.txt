@@ -1,0 +1,18 @@
+/* TEAM */
+	Creator and Maintainer: Kenny Stier
+	Contact: kenny [at] millhousenchurch.com
+	Twitter: @kestier19
+	From: Millhousen, Indiana, USA
+
+/* THANKS */
+
+	Basic Design Creator: Kevin Doyle
+	Twitter: @KevDoy
+	Location: Seattle, Washington, USA
+		
+
+/* SITE */
+	Last update: This week!
+	Language: English
+	Doctype: HTML5
+	IDE: Brackets, GitKraken, Ubuntu, Gnome
