@@ -959,3 +959,13 @@
         width: 80vw;
         height: 50vh
     }
+    
+    table,
+    th,
+    td {
+        text-align: center;
+    }
+    
+    table {
+        margin: 0px auto;
+    }
