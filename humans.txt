@@ -1,7 +1,7 @@
 /* TEAM */
 	Creator and Maintainer: Kenny Stier
 	Contact: kenny [at] millhousenchurch.com
-	Twitter: @kestier19
+	Twitter: @KennyStier61
 	From: Millhousen, Indiana, USA
 
 /* THANKS */
