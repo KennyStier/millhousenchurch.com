@@ -254,7 +254,37 @@
         Align slide image horizontally center 
     } */
     
+   /* .img-slide1 {
+        background-image: url(/img/modern-church-full.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    } */
+    
     .img-slide1 {
+        background-image: url(/img/christmas-altar.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .img-slide2 {
         background-image: url(/img/modern-church-full.jpg);
         background-repeat: no-repeat;
         background-position: center center;
@@ -269,23 +299,8 @@
         transform-style: preserve-3d;
     }
     
-    .img-slide2 {
-        background-image: url(/img/altar.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 500px;
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-    }
-    
     .img-slide3 {
-        background-image: url(/img/auction.jpg);
+        background-image: url(/img/altar.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
