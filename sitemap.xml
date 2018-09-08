@@ -6,6 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://millhousenchurch.com/</loc>
   <changefreq>weekly</changefreq>
@@ -23,8 +24,8 @@
 </url>
 <url>
   <loc>https://millhousenchurch.com/about/history/</loc>
-  <changefreq>yearly</changefreq>
-  <priority>0.90</priority>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://millhousenchurch.com/about/mass/</loc>
@@ -82,6 +83,21 @@
   <priority>0.60</priority>
 </url>
 <url>
+  <loc>https://millhousenchurch.com/about/church-closings.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/faith-formation/elementary/elementary-ff-schedule.pdf</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/faith-formation/high-school/hs-ff-schedule.pdf</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://millhousenchurch.com/bulletins/</loc>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
@@ -100,6 +116,11 @@
   <loc>https://millhousenchurch.com/bulletins/files/2017/</loc>
   <changefreq>weekly</changefreq>
   <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
 </url>
 <url>
   <loc>https://millhousenchurch.com/bulletins/files/2016/2016-11-06.pdf</loc>
@@ -132,13 +153,383 @@
   <priority>0.30</priority>
 </url>
 <url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-06-25.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-07-02.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-07-09.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-07-16.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-07-23.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-07-30.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-08-06.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-08-13.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-08-20.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-08-27.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-09-03.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-09-10.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-09-17.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-09-24.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-10-01.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-10-08.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-10-15.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-10-22.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-10-29.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-11-05.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-11-12.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-11-19.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-11-26.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-12-03.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-12-10.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-12-17.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-12-24.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2017/2017-12-31.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-01-07.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-01-14.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-01-21.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-01-28.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-02-04.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-02-18.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-02-25.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-03-04.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-03-11.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-03-25.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-03-18.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-04-08.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-04-01.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-04-22.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-04-29.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-05-06.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-05-13.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-05-20.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-05-27.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-06-03.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-06-10.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-06-17.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-06-24.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-07-01.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-07-08.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-07-15.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-07-22.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-07-29.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-08-05.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-08-12.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-08-19.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-08-26.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-09-02.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/bulletins/files/2018/2018-09-09.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
   <loc>https://millhousenchurch.com/ministry-schedule/</loc>
-  <changefreq>weekly</changefreq>
+  <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
 <url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-09.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-08.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-07.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-06.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-05.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-04.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-03.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2018-02.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2017-12.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2017-11.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2017-08.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://millhousenchurch.com/ministry-schedule/2017-07.pdf</loc>
+  <changefreq>never</changefreq>
+  <priority>0.30</priority>
+</url>
+<url>
   <loc>https://millhousenchurch.com/ministry-schedule/2017-06.pdf</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>never</changefreq>
   <priority>0.30</priority>
 </url>
 </urlset>
