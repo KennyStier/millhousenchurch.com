@@ -10,12 +10,12 @@
 <body>
     {{.Include "/templates/header.html"}}
     <div style=display:none class="stripe red-stripe" id=hours-anomaly>
-        <p>Faith Formation classes for January 30<sup>th</sup> have been cancelled due to the polar vortex.</p>
+        <p>Faith Formation classes and meetings have been suspended. Mass will continue as scheduled. <a href="https://www.archindy.org/worship/coronavirus2020-norms.html">Please see this notice from the Archdiocese reguarding the coronavirus</a>.</p>
     </div>
     <script>
         var ts = Math.round((new Date()).getTime() / 1000);
         anomaly = document.getElementById('hours-anomaly');
-        if (ts <= 1548900000) {
+        if (ts <= 1588046400) {
             anomaly.style.display = "block";
         } else {
             anomaly.style.display = "none";
