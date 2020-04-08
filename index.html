@@ -10,11 +10,6 @@
 <body>
     {{.Include "/templates/header.html"}}
     <div style=display:none class="stripe red-stripe" id=hours-anomaly>
-        <h2>Prayers</h2>
-        <p>Mark Wittkamper tested positive for the Coronavirus and has gone to his eternal rest. Let us lift our hearts in prayer for him & his family, especially his kids Brian & Sophia.</p>
-        <p>Please adhere to all precautions. Social-distance, self-isolate if you have been in close contact, and get tested if you become ill.</p>
-        <p>Roman Johannigman, Sr. passed away on Wednesday evening at his home. Please join with the family and all parishioners in praying the rosary for him, on Friday evening at 8:30, from your homes.  Burial will be private.</p>
-        <br>
         <p>All public events have been cancelled. This includes Stations, Rosary, and Masses. <a href="https://archindy.org/archbishop/mass2020.html">Please see this notice from the Archdiocese reguarding the coronavirus</a>.</p>
         <p>Lots of Catholic Content can be found on <a href="https://www.ewtn.com/">EWTN</a>. Masses and more can be found on <a href="https://www.youtube.com/channel/UCep--CNHo77hFq9WTDT3f2g">All Saints' Youtube page</a>.</p>
         <p>If you have extra time for prayer, consider downloading <a href="http://hallow.app/share/U2UGFQ">Hallow</a>.</p>
@@ -42,7 +37,7 @@
 
 
 
-            <div class="item active">
+            <div class="item">
                 <!--<div class="img-slide2">
                     <div class="carousel-caption">
                         <p>Built at the center of a German Catholic community, Immaculate Conception has been the heart of Millhousen since 1834</p>
@@ -69,13 +64,16 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="item active">
+            <div class="item active">
                 <div class="img-slide5">
                     <div class="carousel-caption">
                         <p>Happy Easter to all!</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EasterModal">
+                            Quarantine Easter Tips
+                          </button>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!-- <div class="item">
                 <div class="img-slide4">
                     <div class="carousel-caption">
@@ -247,6 +245,68 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="EasterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Quarantine Easter Tips</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="email_section_inside_full_helper">				
+				
+                    <div class="email_column email_column_1 full">
+                        
+                        
+                        
+                                
+                                <div class="email_item item_type_photo" data-type="photo" data-itemid="309315510">
+                                    
+    
+                                            <img width="100%" src="https:////d6iyrqjd26xke.cloudfront.net/beautifuleasterdecorationontable21creativeidea/full.jpg">
+    
+                                    
+                                </div>
+                                
+                                <div class="email_item item_type_text" data-type="text" data-itemid="309315511">
+                                    
+                                        <div>Pull out the good china and put on your best Easter attire. Easter is a time to celebrate! No, things won't be quite the same this year. It's going to feel weird not going to church on Easter Sunday. But the reason for the season hasn't changed!</div><div><br></div><div>Here are some ways to make the most out of your Easter this year:</div><ol><li>Tune in to Mass via live stream at <a href="https://bit.ly/2V3OZQV" class="breakwords">https://bit.ly/2V3OZQV</a>.</li><li>Go ahead and wear your Easter best!</li><li>Listen to your favorite music on an Easter playlist.</li><li>Schedule a virtual gathering with your family and friends to wish them a Happy Easter.</li><li>Make a donation that is meaningful to you, such as your parish or your favorite Catholic charity or organization.&nbsp;</li><li>Send out Easter cards to loved ones and/or those who are home bound.</li><li>Dye Easter eggs and then hide them around your yard for the kids to find.</li><li>Easter is a celebration after all, so set the tone for the day by decorating your table and pulling out the good china.</li><li>Use this at-home Easter as an excuse to start a new tradition with your family.</li></ol><div>We would love to see how your family celebrates this year, and of course see you in your Easter best! Click on the link below to share your Easter photos and/or video with us. Or post them on your Facebook page and use the hashtag #archindycares. We will make a fun video collage and share it so everyone can enjoy.</div>
+                                    
+                                </div>
+                                
+                                <div class="email_item item_type_button" data-type="button" data-itemid="309315512">
+                                    <a href="https://drive.google.com/drive/folders/1LLIe7RB5FrF6CxIwhCHJHtbg-ODtk5NT?usp=sharing" class="btn btn-inv">
+                                        Share your Easter Photos or Video Here!
+                                    </a>       
+                                    <a href="https://www.archindy.org/giving" class="btn btn-inv">
+                                        Give to Your Parish Online
+                                    </a>                             
+                                </div>
+                        
+                        
+                    </div>
+                    
+                                        
+                    
+                    <div class="email_column email_column_2 none">
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                    
+                    <div class="clear"></div>
+                    </div>            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     {{.Include "/templates/footer.html"}}
     <script src="/js/format-google-calendar.js"></script>
     <script>
@@ -279,7 +339,6 @@
                 "https://www.facebook.com/Millhousen/",
                 "https://www.instagram.com/ic_millhousen/",
                 "https://twitter.com/IC_Millhousen/",
-                "https://plus.google.com/101600092827744209060/",
                 "https://www.archindy.org/parishes/listings/097.html",
                 "https://www.yelp.com/biz/immaculate-conception-church-greensburg-2"
             ]
