@@ -3,43 +3,6 @@
 
 <head>
     {{.Include "/templates/head.html"}}
-    <script>
-        //some default pre init
-        var PB = PB || {};
-        PB.q = PB.q || [];
-        PB.events = PB.events || [];
-    
-        //PushBots ApplicationId (required)
-        PB.app_id = "5ec2c386ba89a426804ac193";
-        //Your domain name, must be HTTPS or localhost  (required)
-        PB.domain = "https://millhousenchurch.com";
-        //Update and uncomment it if you are using custom safari certificate for your app
-        PB.safari_push_id = "web.com.pushbots.safaripush";
-        //****************************************
-    
-        PB.logging_enabled = true;
-        PB.auto_subscribe = true;
-    
-        //Custom worker and manifest URL
-        //PB.worker_url = PB.domain + "/pushbots-worker.js";
-    
-        //Welcome notification message
-        PB.welcome = {
-          title: "Welcome ",
-          message: "Thanks for subscribing!",
-          url: PB.domain
-        };
-    
-        function sendNotification() {
-          PB.register();
-          PB.q.push(["sendNotification", {
-            title: "Hey ",
-            message: "Why not?",
-            url: "https://millhousenchurch.com"
-          }]);
-        }
-      </script>
-      <script src="//cdn.pushbots.com/js/sdk.min.js" type="text/javascript" onload="PB.init()" async></script>
     <title>Immaculate Conception Church | Millhousen, IN</title>
     <meta name="description" content="Built at the center of a German Catholic community, Immaculate Conception has been the heart of Millhousen since 1834.">
 </head>
@@ -85,23 +48,23 @@
                 </div>-->
                 <div class="img-slide2">
                     <div class="carousel-caption">
-                        <p>Help keep our historic church in tip top shape</p>
-                        <a href="https://onrealm.org/millhousenchurch/Give/QGXJOKOTNK" class="btn btn-default">Donate to the Steeple Project</a>
+                        <p>We can now process recurring gifts online!</p>
+                        <a href="https://secure.acceptiva.com/?cst=Hg94dq&giveparish=10097%20Immaculate%20Conception,%20Millhousen" class="btn btn-default">Donate</a>
                     </div>
                 </div>
             </div>
             <div class="item">
 
-                <div class="img-slide3">
+                <div class="img-slide3 active">
                     <div class="carousel-caption">
-                        <p>Join us for Mass every Sunday at 8 AM!</p>
+                        <p>We are back open, join us on Sunday at 8 AM!</p>
                         <a href="/about/directions/" class="btn btn-default">
                             Get Directions
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="item active">
+            <!-- <div class="item active">
                 <div class="img-slide5">
                     <div class="carousel-caption">
                         <p>Happy Easter to all!</p>
@@ -110,7 +73,7 @@
                           </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="item">
                 <div class="img-slide4">
                     <div class="carousel-caption">
@@ -158,20 +121,12 @@
     <div class="stripe gray-stripe">
         <h2>Our Staff</h2>
         <div class="row">
-            <div class="col-md-3"> <img src="/img/sr-donna-prickel.jpg" alt="Sister Donna Prickel" height="200" />
+            <div class="col-md-6"> <img src="/img/sr-donna-prickel.jpg" alt="Sister Donna Prickel" height="200" />
                 <h4>Sister Donna Prickel</h4>
                 <h5>Parish Life Coordinator</h5>
             </div>
-            <div class="col-md-3"> <img src="/img/fr-bill-turner.png" alt="Father William Turner" height="200" />
+            <div class="col-md-6"> <img src="/img/fr-bill-turner.png" alt="Father William Turner" height="200" />
                 <h4>Father Bill Turner</h4>
-                <h5>Sacramental Minister</h5>
-            </div>
-            <div class="col-md-3"><img src="/img/mm.png" alt="Melea Gault" height="200" />
-                <h4>Melea Gault</h4>
-                <h5>Interim Administrator of Religious Education</h5>
-            </div>
-            <div class="col-md-3"><img src="/img/fr-john-geis.png" alt="Father John Geis" height="200" />
-                <h4>Father John Geis</h4>
                 <h5>Sacramental Minister</h5>
             </div>
 
