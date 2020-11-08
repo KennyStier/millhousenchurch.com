@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    {{.Include "/templates/head.html"}}
+    {{include "/templates/head.html"}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" />
     <title>Events Calendar - Immaculate Conception Church</title>
     <meta name="description" content="View the calendar of events to catch up on what is going on.">
 </head>
 
 <body>
-    {{.Include "/templates/header.html"}}
+    {{include "/templates/header.html"}}
     <div class="container">
         <h1>Events Calendar</h1>
         <div id='calendar'>
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    {{.Include "/templates/footer.html"}}
+    {{include "/templates/footer.html"}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>

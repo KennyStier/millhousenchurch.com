@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  {{.Include "/templates/head.html"}}
+  {{include "/templates/head.html"}}
   <title>Ministry Schedule - Immaculate Conception Church</title>
   <meta name="description" content="Find out when you are on the schedule to assist in Mass.">
 </head>
 
 <body>
-  {{.Include "/templates/header.html"}}
+  {{include "/templates/header.html"}}
   <div class="container bulletin-embed">
     <h1>Ministry Schedule</h1>
     <object data="files/2020/2020-11.pdf" type="application/pdf" width="100%" height="800">
@@ -17,7 +17,7 @@
     <h3>Need an older list?</h3>
     <p>If you are in need of an older ministry list, <a href="/ministry-schedule/files/">browse our archives</a>.</p>
   </div>
-  {{.Include "/templates/footer.html"}}
+  {{include "/templates/footer.html"}}
 </body>
 
 </html>
