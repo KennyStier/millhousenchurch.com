@@ -10,13 +10,13 @@
 <body>
     {{include "/templates/header.html"}}
     <div style=display:none class="stripe red-stripe" id=hours-anomaly>
-        <p>Father Santhosh is sick, so Mass for January 3rd has been cancelled.</p>
+        <p>Father Santhosh and Father John Meyer are sick, so Mass for January 10th has been cancelled both here and at St. Mary's Greensburg.</p>
 	<p>Masses nearby can be found on <a href="https://masstimes.org/map?lat=39.21&lng=-85.43&SearchQueryTerm=Millhousen,%20Indiana">MassTimes.org</a>.<p>
     </div>
     <script>
         var ts = Math.round((new Date()).getTime() / 1000);
         anomaly = document.getElementById('hours-anomaly');
-        if (ts <= 1609686000) {
+        if (ts <= 1610312400) {
             anomaly.style.display = "block";
         } else {
             anomaly.style.display = "none";
