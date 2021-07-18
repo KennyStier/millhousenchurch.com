@@ -263,8 +263,8 @@
         Align slide image horizontally center 
     } */
 
-    /* .img-slide1 {
-        background-image: url(/img/modern-church-full.jpg);
+     .img-slide0 {
+        background-image: url(/img/modern-church-full-straight.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
@@ -276,7 +276,7 @@
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
         transform-style: preserve-3d;
-    } */
+    } 
 
     .img-slide1 {
         background-image: url(/img/auction.jpg);
@@ -309,7 +309,7 @@
     }
 
     .img-slide3 {
-        background-image: url(/img/altar.jpg);
+        background-image: url(/img/from-loft.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;

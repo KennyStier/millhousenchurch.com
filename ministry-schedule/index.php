@@ -11,9 +11,14 @@
   {{include "/templates/header.html"}}
   <div class="container bulletin-embed">
     <h1>Ministry Schedule</h1>
-    <object data="files/2021/2021-05.pdf" type="application/pdf" width="100%" height="800">
-      <p>This browser does not support PDFs. Please <a href="files/2021/2021-05.pdf">download the PDF</a> to view it.</p>
-    </object>
+	<?php
+        $files = scandir('files/2021', SCANDIR_SORT_DESCENDING);
+        $newest_file = $files[0];
+
+        echo "<iframe width='100%' height='800' frameBorder='0'
+        src='/js/pdfjs/web/viewer.html?file=/ministry-schedule/files/2021/$newest_file'></iframe>"
+	?>
+
     <h3>Need an older list?</h3>
     <p>If you are in need of an older ministry list, <a href="/ministry-schedule/files/">browse our archives</a>.</p>
   </div>

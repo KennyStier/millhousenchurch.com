@@ -1,4 +1,5 @@
 User-Agent: *
-Disallow: 
+Disallow: /admin
+Disallow: /auth
 
 Sitemap: https://millhousenchurch.com/sitemap.xml
